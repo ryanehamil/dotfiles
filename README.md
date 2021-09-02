@@ -11,3 +11,9 @@ changing quite frequently. Use at your own risk.
 
 If you want to install part of the configurations, just **cd** into
 target folder and run `./setup` located inside.
+
+## Credits
+
+The start of this repo was based off of
+[rwxrob/dot](https://github.com/rwxrob/dot).
+If interested, check him out on [twitch](https://www.twitch.tv/rwxrob).

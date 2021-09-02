@@ -54,6 +54,7 @@ fi
 unalias -a
 alias dot="cd $DOTFILES"
 alias scripts="cd $SCRIPTS"
+alias repo="cd $REPOS"
 alias ls='ls -h --color=auto'
 alias ll='ls -l'
 alias la='ls -la'

@@ -26,6 +26,8 @@ export LESS_TERMCAP_us=$'\e[01;32m'
 export HISTCONTROL=ignoreboth
 export HISTSIZE=5000
 export HISTFILESIZE=10000
+# path
+export PATH=$GOBIN:$SCRIPTS:$PATH
 
 # ------------------------------ bash shell opts -----------------------
 
@@ -55,4 +57,22 @@ alias clear='printf "\e[H\e[2J"'
 
 _have vim && alias vi=vim
 
-export PATH=$GOBIN:$SCRIPTS:$PATH
+# ------------------------------ aliases -------------------------------
+__ps1() {
+  u='\[\e[33m\]' b='\[\e[36m\]' h='\[\e[34m\]'
+  g='\[\e[37m\]' w='\[\e[35m\]' x='\[\e[0m\]'
+  c='\[\e[31m\]'
+
+  B=$(git branch --show-current 2>/dev/null)
+  C=$(git status --porcelain 2>/dev/null)
+  if [[ -z "$B" ]]; then
+    PS1="$u\u$g@$h\h$g:$w\W\$$x "
+  else
+    if [[ -z "$C" ]]; then
+      c='\[\e[32m\]'
+    fi
+    PS1="$u\u$g@$h\h$g:$w\W $b($c$B$b)\$$x "
+  fi
+}
+
+PROMPT_COMMAND="__ps1"

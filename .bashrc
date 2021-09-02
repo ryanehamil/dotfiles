@@ -40,6 +40,16 @@ shopt -s histappend
 
 set -o vi
 
+# ------------------------------ dircolors ----------------------------
+
+if _have dircolors; then
+  if [[ -r "$HOME/.dircolors" ]]; then
+    eval "$(dircolors -b "$HOME/.dircolors")"
+  else
+    eval "$(dircolors -b)"
+  fi
+fi
+
 # ------------------------------ aliases -------------------------------
 unalias -a
 alias dot="cd $DOTFILES"
@@ -57,7 +67,7 @@ alias clear='printf "\e[H\e[2J"'
 
 _have vim && alias vi=vim
 
-# ------------------------------ aliases -------------------------------
+# ------------------------------ PS1 Prompt ----------------------------
 __ps1() {
   u='\[\e[33m\]' b='\[\e[36m\]' h='\[\e[34m\]'
   g='\[\e[37m\]' w='\[\e[35m\]' x='\[\e[0m\]'

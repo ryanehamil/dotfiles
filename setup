@@ -2,6 +2,7 @@
 set -e
 
 ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
+ln -sf "$PWD/.dircolors" "$HOME/.dircolors"
 ln -sf "$PWD/scripts" "$HOME/Scripts"
 
 # Setup other configurations

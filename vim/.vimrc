@@ -103,6 +103,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'morhetz/gruvbox'
   call plug#end()
 
+  " gruvbox
+  autocmd vimenter * ++nested colorscheme gruvbox
   " pandoc
   let g:pandoc#formatting#mode = 'h' " A'
   let g:pandoc#formatting#textwidth = 72

@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
+ln -sf "$PWD/scripts" "$HOME/Scripts"
+
+# Setup other configurations
+for i in vim; do
+  cd $i && ./setup
+  cd -
+done

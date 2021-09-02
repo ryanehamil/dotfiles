@@ -27,7 +27,7 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 # path
-export PATH=$GOBIN:$SCRIPTS:$PATH
+export PATH=$GOPATH/bin:$GOBIN:$SCRIPTS:$PATH
 
 # ------------------------------ bash shell opts -----------------------
 

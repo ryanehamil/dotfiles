@@ -103,6 +103,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'morhetz/gruvbox'
   call plug#end()
 
+  autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+  autocmd InsertLeave * if pumvisible() == 0|pclose|endif
   " gruvbox
   autocmd vimenter * ++nested colorscheme gruvbox
   " pandoc
@@ -125,7 +127,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   let g:go_highlight_build_constraints = 1
   let g:go_highlight_diagnostic_errors = 1
   let g:go_highlight_diagnostic_warnings = 1
-  "let g:go_auto_type_info = 1 " forces 'Press ENTER' too much
+  let g:go_auto_type_info = 1 "can force 'Press ENTER' too much
   let g:go_auto_sameids = 0
   "let g:go_metalinter_command='golangci-lint'
   "let g:go_metalinter_command='golint'
@@ -138,6 +140,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   au FileType go nmap <leader>c :GoCoverageToggle<CR>
   au FileType go nmap <leader>i :GoInfo<CR>
   au FileType go nmap <leader>l :GoMetaLinter!<CR>
+  "au filetype go inoremap <buffer> . .<C-x><C-o>
 else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
 endif

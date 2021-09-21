@@ -144,3 +144,5 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
 endif
+
+au BufRead,BufNewFile *.pp set filetype=ruby

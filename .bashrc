@@ -27,8 +27,7 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 # path
-export
-PATH="$GOPATH/bin:$GOBIN:$SCRIPTS:$HOME/bin:/usr/local/share/gems:$USER/.gem/ruby:/usr/share/gems:$PATH"
+export PATH="$GOPATH/bin:$GOBIN:$SCRIPTS:$HOME/bin:/usr/local/share/gems:$USER/.gem/ruby:/usr/share/gems:$PATH"
 
 # ------------------------------ bash shell opts -----------------------
 

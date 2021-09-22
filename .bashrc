@@ -68,6 +68,10 @@ alias clear='printf "\e[H\e[2J"'
 
 _have vim && alias vi=vim
 
+# ------------------------------ Sourcing ------------------------------
+VENV="$HOME/.local/bin/virtualenvwrapper.sh"
+[[ -f "$VENV" ]] && . "$VENV"
+
 # ------------------------------ PS1 Prompt ----------------------------
 __ps1() {
   u='\[\e[33m\]' b='\[\e[36m\]' h='\[\e[34m\]'
@@ -87,3 +91,4 @@ __ps1() {
 }
 
 PROMPT_COMMAND="__ps1"
+

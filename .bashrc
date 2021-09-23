@@ -76,17 +76,18 @@ VENV="$HOME/.local/bin/virtualenvwrapper.sh"
 __ps1() {
   u='\[\e[33m\]' b='\[\e[36m\]' h='\[\e[34m\]'
   g='\[\e[37m\]' w='\[\e[35m\]' x='\[\e[0m\]'
-  c='\[\e[31m\]'
+  c='\[\e[31m\]' v=''
 
   B=$(git branch --show-current 2>/dev/null)
   C=$(git status --porcelain 2>/dev/null)
+  [[ -n $VIRTUAL_ENV ]] && v="(${VIRTUAL_ENV##*/})"
   if [[ -z "$B" ]]; then
     PS1="$u\u$g@$h\h$g:$w\W\$$x "
   else
     if [[ -z "$C" ]]; then
       c='\[\e[32m\]'
     fi
-    PS1="$u\u$g@$h\h$g:$w\W $b($c$B$b)\$$x "
+    PS1="$v$u\u$g@$h\h$g:$w\W $b($c$B$b)\$$x "
   fi
 }
 

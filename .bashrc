@@ -60,6 +60,7 @@ alias ll='ls -l'
 alias la='ls -la'
 alias vb="$EDITOR $HOME/.bashrc"
 alias vv="$EDITOR $HOME/.vimrc"
+alias vs="$EDITOR $HOME/.config/sway/config"
 alias free='free -h'
 alias df='df -h'
 alias chmox='chmod +x'

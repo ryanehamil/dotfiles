@@ -1,12 +1,12 @@
 #!/bin/sh
 set -e
 
-ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
-ln -sf "$PWD/.dircolors" "$HOME/.dircolors"
-ln -sf "$PWD/scripts" "$HOME/Scripts"
+ln -sfn "$PWD/.bashrc" "$HOME/.bashrc"
+ln -sfn "$PWD/.dircolors" "$HOME/.dircolors"
+ln -sfn "$PWD/scripts" "$HOME/Scripts"
 
 # Setup other configurations
-for i in vim tmux; do
+for i in vim tmux sway alacritty; do
   cd $i && ./setup
-  cd -
+  cd - >/dev/null
 done

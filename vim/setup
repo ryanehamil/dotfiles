@@ -1,10 +1,9 @@
 #!/bin/bash
 
-if ! command -v vim &>/dev/null; then
-  echo "Need to install vim."
-  exit 1
-fi
+command -v vim >/dev/null 2>&1 || {
+  echo >&2 "Vim not installed. (skip)"; exit 1;
+}
 
 ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
 mkdir -p "$HOME/.vim/autoload"
-ln -sf "$PWD/autoload/plug.vim" "$HOME/.vim/autoload/plug.vim"
+ln -sfn "$PWD/autoload/plug.vim" "$HOME/.vim/autoload/plug.vim"

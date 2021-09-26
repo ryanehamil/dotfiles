@@ -1,0 +1,5 @@
+#!/bin/bash
+command -v alacritty >/dev/null 2>&1 || {
+  echo >&2 "Alacritty not installed. (skip)"; exit 1;
+}
+ln -sfn "$PWD" "$HOME/.config/alacritty"

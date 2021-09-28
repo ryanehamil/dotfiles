@@ -8,8 +8,8 @@ Several features are missing, but will continue adding.
 Some tools are required for full features. There will eventually be a
 script to auto install dependencies.
 
-- (light)[https://github.com/haikarainen/light]
-- (font-awesome-desktop) [https://fontawesome.com/download]
+- [light](https://github.com/haikarainen/light)
+- [font-awesome-desktop](https://fontawesome.com/download)
 
 ## Todo
 

@@ -9,8 +9,10 @@ Some tools are required for full features. There will eventually be a
 script to auto install dependencies.
 
 - (light)[https://github.com/haikarainen/light]
+- (font-awesome-desktop) [https://fontawesome.com/download]
 
 ## Todo
 
 - Add function key support (brightness, volume, etc.)
 - Add dependency script
+- Add keybindings to README

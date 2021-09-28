@@ -192,7 +192,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Window Rules
 #
 
-assign [app_id="firefox"] $ws2
+assign [class="Firefox"]    $ws2
+assign [class="discord"]    $ws3
+assign [class="Steam"]      $ws4
 #
 # Scratchpad:
 #

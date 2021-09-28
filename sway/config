@@ -83,12 +83,23 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     'You are about to exit sway. Are you sure?' \
     -b 'Yes, Exit' 'swaymsg exit'
 
+    ### Fn keys
+
     # Backlight controls: requires `light` to be installed
     # Uses log(100,1.4) for smoother adjustments
     bindsym --locked XF86MonBrightnessUp exec light -S "$(light -G \
         | awk '{ print int(($1 + .72) * 1.4) }')"
     bindsym --locked XF86MonBrightnessDown exec light -S "$(light -G \
         | awk '{ print int($1 / 1.4) }')"
+
+    # Volume controls
+    bindsym --to-code --locked XF86AudioRaiseVolume exec \
+        "amixer -q sset Master 3%+"
+    bindsym --to-code --locked XF8e6AudioLowerVolume exec \
+        "amixer -q sset Master 3%-"
+    bindsym --to-code --locked XF86AudioMute exec \
+        "amixer -D pulse sset Master toggle -q"
+
 #
 # Moving around:
 #

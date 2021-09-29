@@ -83,7 +83,7 @@ __ps1() {
   C=$(git status --porcelain 2>/dev/null)
   [[ -n $VIRTUAL_ENV ]] && v="(${VIRTUAL_ENV##*/})"
   if [[ -z "$B" ]]; then
-    PS1="$u\u$g@$h\h$g:$w\W\$$x "
+    PS1="$v$u\u$g@$h\h$g:$w\W\$$x "
   else
     if [[ -z "$C" ]]; then
       c='\[\e[32m\]'

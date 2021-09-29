@@ -11,6 +11,8 @@ script to auto install dependencies.
 - [light](https://github.com/haikarainen/light)
 - [font-awesome-desktop](https://fontawesome.com/download)
 - [swaylock](https://github.com/swaywm/swaylock)
+- [waybar](https://github.com/Alexays/Waybar)
+- [fzf](https://github.com/junegunn/fzf)
 
 ## Todo
 

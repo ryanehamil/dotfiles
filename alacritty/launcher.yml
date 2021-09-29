@@ -1,0 +1,14 @@
+window:
+  padding:
+    x: 10
+    y: 10
+  decorations: none
+  dimensions:
+    columns: 64
+    lines: 10
+colors:
+  primary:
+    background: '#252525'
+background_opacity: 0.9
+font:
+  size: 13.0

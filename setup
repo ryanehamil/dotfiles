@@ -6,7 +6,7 @@ ln -sfn "$PWD/.dircolors" "$HOME/.dircolors"
 ln -sfn "$PWD/scripts" "$HOME/Scripts"
 
 # Setup other configurations
-for i in vim tmux sway alacritty; do
+for i in vim tmux sway alacritty waybar; do
   cd $i && ./setup
   cd - >/dev/null
 done
